@@ -1,0 +1,24 @@
+import pandas as pd
+data=pd.read_csv("openpowerlifting.csv")
+data.shape
+
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+data=pd.read_csv("openpowerlifting.csv")
+
+
+X= data.iloc[:,:-1]
+Y=data.iloc[:,:-1]
+
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.05,random_state=0)
+
+X_train
+
+X_test
+
+import matplotlib.pyplot as plt
+df=pd.DataFrame(data,columns=['BodyweightKg','WeightClassKg'])
+print(df)
+
+df.hist()
+plt.show()
